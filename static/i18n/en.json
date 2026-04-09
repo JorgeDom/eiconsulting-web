@@ -31,6 +31,11 @@
     "item3": "Technical validation of installed structures.",
     "item4": "Control of compliance with safety protocols."
   },
+  "consultant": {
+    "title": "Technical Direction",
+    "role": "Industrial Engineer - Consultant",
+    "bio": "Professional with extensive experience in the supervision of installations and verification of technical compliance in operational plants. Leads the rigorous management of industrial safety protocols and structural quality validation, ensuring the highest standards in every project."
+  },
   "contact": {
     "title": "Contact",
     "role": "Industrial Engineer - Consultant"
