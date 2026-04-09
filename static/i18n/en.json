@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About Us",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Excellence in Technical Inspection and Industrial Safety",
+    "subtitle": "Ensuring the integrity and efficiency of your projects.",
+    "cta": "Contact Us"
+  },
+  "about": {
+    "title": "About Us",
+    "mission_title": "Our Mission",
+    "mission_text": "To provide specialized technical inspection services with the highest rigor, ensuring compliance with specifications and safety protocols.",
+    "vision_title": "Our Vision",
+    "vision_text": "To consolidate ourselves as the national reference consulting firm in technical validation and operational quality assurance for the industrial sector.",
+    "values_title": "Core Values",
+    "values": {
+      "rigor": "Technical Rigor",
+      "safety": "Comprehensive Safety",
+      "integrity": "Objectivity and Integrity",
+      "excellence": "Operational Excellence"
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "item1": "Technical inspection of industrial plant assembly.",
+    "item2": "Installation supervision and quality control.",
+    "item3": "Technical validation of installed structures.",
+    "item4": "Control of compliance with safety protocols."
+  },
+  "contact": {
+    "title": "Contact",
+    "role": "Industrial Engineer - Consultant"
+  },
+  "footer": {
+    "copyright": "© 2026 Environmental & Industrial Consulting. All rights reserved."
+  }
+}

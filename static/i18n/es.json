@@ -1,0 +1,41 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "about": "Institucional",
+    "services": "Servicios",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title": "Excelencia en Fiscalización Técnica y Seguridad Industrial",
+    "subtitle": "Garantizando la integridad y eficiencia de sus proyectos.",
+    "cta": "Contáctenos"
+  },
+  "about": {
+    "title": "Sobre Nosotros",
+    "mission_title": "Nuestra Misión",
+    "mission_text": "Proveer servicios especializados de fiscalización técnica con el más alto rigor, asegurando el cumplimiento de especificaciones y protocolos de seguridad.",
+    "vision_title": "Nuestra Visión",
+    "vision_text": "Consolidarnos como la firma consultora de referencia a nivel nacional en la validación técnica y aseguramiento de calidad operativa para el sector industrial.",
+    "values_title": "Valores Institucionales",
+    "values": {
+      "rigor": "Rigor Técnico",
+      "safety": "Seguridad Integral",
+      "integrity": "Objetividad e Integridad",
+      "excellence": "Excelencia Operativa"
+    }
+  },
+  "services": {
+    "title": "Nuestros Servicios",
+    "item1": "Fiscalización técnica de montaje en planta industrial.",
+    "item2": "Supervisión de instalaciones y control de calidad.",
+    "item3": "Validación técnica de estructuras instaladas.",
+    "item4": "Control del cumplimiento de protocolos de seguridad."
+  },
+  "contact": {
+    "title": "Contacto",
+    "role": "Ingeniera Industrial - Consultora"
+  },
+  "footer": {
+    "copyright": "© 2026 Environmental & Industrial Consulting. Todos los derechos reservados."
+  }
+}
