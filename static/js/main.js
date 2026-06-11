@@ -1,79 +1,172 @@
+/* ============================================================
+   EI Consulting — main.js
+   Navbar · i18n · Reveal · Counters · Burger · Form
+   ============================================================ */
+
 document.addEventListener('DOMContentLoaded', () => {
-    // Idioma por defecto
-    let currentLang = 'es';
-    let translations = {};
 
-    // Referencias a los botones de cambio de idioma
-    const btnEs = document.getElementById('btn-es');
-    const btnEn = document.getElementById('btn-en');
+  /* ── 1. NAVBAR ──────────────────────────────────────────── */
+  const navbar = document.getElementById('navbar');
 
-    // Función para cargar el archivo JSON correspondiente
-    const loadTranslations = async (lang) => {
-        try {
-            // Utilizamos la ruta relativa desde la raíz del servidor Flask
-            const response = await fetch(`/static/i18n/${lang}.json`);
-            if (!response.ok) throw new Error('Network response was not ok');
-            translations = await response.json();
-            applyTranslations();
-        } catch (error) {
-            console.error('Error loading translations:', error);
-        }
-    };
+  const updateNavbar = () => {
+    const scrolled = window.scrollY > 30;
+    navbar.dataset.scrolled = scrolled;
+  };
 
-    // Función para aplicar los textos al DOM
-    const applyTranslations = () => {
-        // Seleccionamos todos los elementos con el atributo data-i18n
-        const elements = document.querySelectorAll('[data-i18n]');
-        
-        elements.forEach(element => {
-            const key = element.getAttribute('data-i18n');
-            // Navegamos por el objeto JSON usando la clave (ej. 'hero.title' -> hero -> title)
-            const keys = key.split('.');
-            let value = translations;
-            
-            for (const k of keys) {
-                if (value && value[k]) {
-                    value = value[k];
-                } else {
-                    value = null;
-                    break;
-                }
-            }
-            
-            if (value) {
-                element.textContent = value;
-            }
-        });
-    };
+  window.addEventListener('scroll', updateNavbar, { passive: true });
+  updateNavbar();
 
-    // Función para manejar el cambio visual de los botones
-    const updateActiveButton = (lang) => {
-        if (lang === 'es') {
-            btnEs.classList.add('active');
-            btnEn.classList.remove('active');
-        } else {
-            btnEn.classList.add('active');
-            btnEs.classList.remove('active');
-        }
-    };
+  /* ── 2. BURGER ──────────────────────────────────────────── */
+  const burger      = document.getElementById('burger');
+  const burgerOpen  = document.getElementById('burger-open');
+  const burgerClose = document.getElementById('burger-close');
+  const mobileMenu  = document.getElementById('mobile-menu');
 
-    // Event Listeners para los botones
-    btnEs.addEventListener('click', () => {
-        if (currentLang !== 'es') {
-            currentLang = 'es';
-            loadTranslations(currentLang);
-            updateActiveButton(currentLang);
-        }
+  burger?.addEventListener('click', () => {
+    const isOpen = !mobileMenu.classList.contains('hidden');
+    mobileMenu.classList.toggle('hidden', isOpen);
+    burgerOpen.classList.toggle('hidden', !isOpen);
+    burgerClose.classList.toggle('hidden', isOpen);
+  });
+
+  mobileMenu?.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+      burgerOpen.classList.remove('hidden');
+      burgerClose.classList.add('hidden');
     });
+  });
 
-    btnEn.addEventListener('click', () => {
-        if (currentLang !== 'en') {
-            currentLang = 'en';
-            loadTranslations(currentLang);
-            updateActiveButton(currentLang);
-        }
+  /* ── 3. i18n ────────────────────────────────────────────── */
+  let currentLang = document.documentElement.lang || 'es';
+
+  async function loadLang(lang) {
+    try {
+      const res  = await fetch(`/api/lang/${lang}`);
+      const data = await res.json();
+      applyTranslations(data);
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('.lang-btn').forEach(btn => {
+        const active = btn.dataset.lang === lang;
+        btn.classList.toggle('bg-brand-green',  active);
+        btn.classList.toggle('text-brand-navy', active);
+        btn.classList.toggle('text-white',      !active);
+      });
+    } catch (e) {
+      console.error('i18n error:', e);
+    }
+  }
+
+  function applyTranslations(t) {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const val = el.dataset.i18n.split('.').reduce((o, k) => o?.[k], t);
+      if (val === undefined) return;
+      if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+        el.placeholder = val;
+      } else {
+        el.textContent = val;
+      }
     });
+  }
 
-    // Carga inicial del idioma por defecto
-    loadTranslations(currentLang);
+  document.querySelectorAll('.lang-btn[data-lang]').forEach(btn => {
+    btn.addEventListener('click', () => loadLang(btn.dataset.lang));
+  });
+
+  /* ── 4. SCROLL REVEAL ───────────────────────────────────── */
+  const revealObs = new IntersectionObserver((entries) => {
+    entries.forEach((entry, i) => {
+      if (!entry.isIntersecting) return;
+      const delay = parseInt(entry.target.dataset.delay || 0, 10);
+      setTimeout(() => entry.target.classList.add('visible'), delay);
+      revealObs.unobserve(entry.target);
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+
+  /* ── 5. COUNTER ANIMATION ───────────────────────────────── */
+  const counterObs = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (!entry.isIntersecting) return;
+      const el = entry.target;
+      const target = parseInt(el.dataset.target, 10);
+      const duration = 1600;
+      const start = performance.now();
+      const easeOut = t => 1 - Math.pow(1 - t, 3);
+      const tick = (now) => {
+        const p = Math.min((now - start) / duration, 1);
+        el.textContent = Math.round(easeOut(p) * target);
+        if (p < 1) requestAnimationFrame(tick);
+      };
+      requestAnimationFrame(tick);
+      counterObs.unobserve(el);
+    });
+  }, { threshold: 0.5 });
+
+  document.querySelectorAll('.counter').forEach(el => counterObs.observe(el));
+
+  /* ── 6. ACTIVE NAV LINK ─────────────────────────────────── */
+  const sections  = document.querySelectorAll('section[id], header[id]');
+  const navLinks  = document.querySelectorAll('#nav-links .nav-link');
+
+  window.addEventListener('scroll', () => {
+    let current = '';
+    sections.forEach(sec => {
+      if (window.scrollY >= sec.offsetTop - 130) current = sec.id;
+    });
+    navLinks.forEach(a => {
+      const isActive = a.getAttribute('href') === `#${current}`;
+      a.classList.toggle('text-brand-green', isActive);
+    });
+  }, { passive: true });
+
+  /* ── 7. CONTACT FORM ────────────────────────────────────── */
+  const form      = document.getElementById('contact-form');
+  const submitBtn = document.getElementById('submit-btn');
+  const btnText   = document.getElementById('btn-text');
+  const spinner   = document.getElementById('btn-spinner');
+  const formMsg   = document.getElementById('form-msg');
+
+  form?.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const payload = {
+      name:    form.name.value.trim(),
+      email:   form.email.value.trim(),
+      message: form.message.value.trim(),
+    };
+    if (!payload.name || !payload.email || !payload.message) return;
+
+    submitBtn.disabled = true;
+    spinner.classList.remove('hidden');
+    formMsg.className = 'hidden mb-4 px-4 py-3 rounded-lg text-sm font-medium';
+
+    try {
+      const res  = await fetch('/api/contact', {
+        method:  'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body:    JSON.stringify(payload),
+      });
+      const data = await res.json();
+
+      if (data.ok) {
+        formMsg.className = 'success mb-4 px-4 py-3 rounded-lg text-sm font-medium';
+        formMsg.textContent = currentLang === 'es'
+          ? '¡Mensaje enviado correctamente!'
+          : 'Message sent successfully!';
+        form.reset();
+      } else {
+        formMsg.className = 'error mb-4 px-4 py-3 rounded-lg text-sm font-medium';
+        formMsg.textContent = data.error || 'Error al enviar.';
+      }
+    } catch {
+      formMsg.className = 'error mb-4 px-4 py-3 rounded-lg text-sm font-medium';
+      formMsg.textContent = 'Error de red. Intente nuevamente.';
+    } finally {
+      submitBtn.disabled = false;
+      spinner.classList.add('hidden');
+    }
+  });
+
 });

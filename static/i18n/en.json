@@ -1,46 +1,82 @@
 {
   "nav": {
-    "home": "Home",
-    "about": "About Us",
+    "about":    "About Us",
     "services": "Services",
-    "contact": "Contact"
+    "why":      "Why Us",
+    "contact":  "Contact"
   },
   "hero": {
-    "title": "Excellence in Technical Inspection and Industrial Safety",
-    "subtitle": "Ensuring the integrity and efficiency of your projects.",
-    "cta": "Contact Us"
+    "badge":    "Paraguay · Industrial Technical Consulting",
+    "title":    "Excellence in Technical Inspection and Industrial Safety",
+    "subtitle": "We ensure the integrity and efficiency of your projects with the highest corporate and regulatory standards.",
+    "cta":      "Request Advisory",
+    "cta2":     "View Services",
+    "stat1":    "Years of Experience",
+    "stat2":    "Completed Projects",
+    "stat3":    "% Technical Compliance"
   },
   "about": {
-    "title": "About Us",
-    "mission_title": "Our Mission",
-    "mission_text": "To provide specialized technical inspection services with the highest rigor, ensuring compliance with specifications and safety protocols.",
-    "vision_title": "Our Vision",
-    "vision_text": "To consolidate ourselves as the national reference consulting firm in technical validation and operational quality assurance for the industrial sector.",
-    "values_title": "Core Values",
-    "values": {
-      "rigor": "Technical Rigor",
-      "safety": "Comprehensive Safety",
-      "integrity": "Objectivity and Integrity",
-      "excellence": "Operational Excellence"
-    }
+    "tag":        "Who We Are",
+    "title":      "About Us",
+    "subtitle":   "Committed to technical excellence and operational safety in every project we lead.",
+    "card1_title": "Mission",
+    "card1_text":  "To provide specialized technical consulting services, ensuring compliance with quality standards, safety, and applicable regulations at every stage of our clients' projects.",
+    "card2_title": "Vision",
+    "card2_text":  "To establish ourselves as the reference company in industrial technical consulting in Paraguay, recognized for the soundness of our criteria and our positive impact on safety and productivity.",
+    "card3_title": "Values",
+    "card3_text":  "Technical Rigor · Integrity and Objectivity · Commitment to Safety · Operational Excellence. Principles that guide every opinion and report we issue."
   },
   "services": {
-    "title": "Our Services",
-    "item1": "Technical inspection of industrial plant assembly.",
-    "item2": "Installation supervision and quality control.",
-    "item3": "Technical validation of installed structures.",
-    "item4": "Control of compliance with safety protocols."
+    "tag":      "What We Do",
+    "title":    "Our Services",
+    "subtitle": "Specialized technical solutions executed with international quality and precision standards.",
+    "s1_title": "Assembly Inspection",
+    "s1_text":  "Rigorous technical control of assemblies in complex industrial plants, ensuring precision and specification compliance at every phase.",
+    "s2_title": "Installation Supervision",
+    "s2_text":  "Strict monitoring of technical installations to ensure maximum quality and operational efficiency under precise specifications.",
+    "s3_title": "Safety Protocols",
+    "s3_text":  "Comprehensive control of regulatory compliance in industrial safety to safeguard the integrity of people, assets, and productive processes.",
+    "s4_title": "Structural Validation",
+    "s4_text":  "Technical and documentary validation of installed structures in accordance with design specifications and applicable regulations.",
+    "s5_title": "Technical Reports",
+    "s5_text":  "Preparation of detailed technical reports, expert opinions, and supporting documentation for audits and regulatory inspections.",
+    "cta_title": "Have a project?",
+    "cta_text":  "Contact us to assess your technical requirements and receive a tailored proposal.",
+    "cta_btn":   "Contact Us Now"
   },
-  "consultant": {
-    "title": "Technical Direction",
-    "role": "Industrial Engineer - Consultant",
-    "bio": "Professional with extensive experience in the supervision of installations and verification of technical compliance in operational plants. Leads the rigorous management of industrial safety protocols and structural quality validation, ensuring the highest standards in every project."
+  "why": {
+    "tag":        "Our Difference",
+    "title":      "Why Choose Us",
+    "subtitle":   "Over a decade of industry experience backs us up.",
+    "card_title": "Technical Independence",
+    "card_text":  "Our reports and opinions are completely objective and impartial. We work with total independence from contractors and suppliers, ensuring the objectivity of every assessment.",
+    "f1_title":   "Rigor at Every Stage",
+    "f1_text":    "We apply methodologies and international standards at every assessment, from planning to final report delivery.",
+    "f2_title":   "Complete Documentation",
+    "f2_text":    "We deliver detailed technical reports, inspection protocols, and photographic evidence supporting each issued opinion.",
+    "f3_title":   "National Reach",
+    "f3_text":    "Agile operational capacity for projects throughout Paraguay with competitive response times.",
+    "s1_label":   "Years of Experience",
+    "s1_sub":     "In industrial consulting",
+    "s2_label":   "Technical Compliance",
+    "s2_sub":     "Across all our projects",
+    "s3_label":   "Completed Projects",
+    "s3_sub":     "Nationwide"
   },
   "contact": {
-    "title": "Contact",
-    "role": "Industrial Engineer - Consultant"
+    "tag":      "Let's Work Together",
+    "title":    "Contact",
+    "subtitle": "Do you have a project that requires specialized technical supervision? We are ready to advise you.",
+    "role":     "Industrial Engineer — Consultant",
+    "name":     "Full Name",
+    "email":    "Email Address",
+    "message":  "Message or Inquiry",
+    "send":     "Send Message"
   },
   "footer": {
-    "copyright": "© 2026 Environmental & Industrial Consulting. All rights reserved."
+    "desc":          "Specialized technical consulting in inspection, supervision and industrial safety in Paraguay.",
+    "links_title":   "Navigation",
+    "contact_title": "Direct Contact",
+    "copy":          "© 2026 Environmental & Industrial Consulting · eiconsulting.com.py"
   }
 }

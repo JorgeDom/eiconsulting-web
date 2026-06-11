@@ -1,46 +1,82 @@
 {
   "nav": {
-    "home": "Inicio",
-    "about": "Institucional",
+    "about":    "Nosotros",
     "services": "Servicios",
-    "contact": "Contacto"
+    "why":      "Por Qué Nosotros",
+    "contact":  "Contacto"
   },
   "hero": {
-    "title": "Excelencia en Fiscalización Técnica y Seguridad Industrial",
-    "subtitle": "Garantizando la integridad y eficiencia de sus proyectos.",
-    "cta": "Contáctenos"
+    "badge":    "Paraguay · Consultoría Técnica Industrial",
+    "title":    "Excelencia en Fiscalización Técnica y Seguridad Industrial",
+    "subtitle": "Garantizamos la integridad y eficiencia de sus proyectos con los más altos estándares corporativos y normativos.",
+    "cta":      "Solicitar Asesoría",
+    "cta2":     "Ver Servicios",
+    "stat1":    "Años de Experiencia",
+    "stat2":    "Proyectos Completados",
+    "stat3":    "% Conformidad Técnica"
   },
   "about": {
-    "title": "Sobre Nosotros",
-    "mission_title": "Nuestra Misión",
-    "mission_text": "Proveer servicios especializados de fiscalización técnica con el más alto rigor, asegurando el cumplimiento de especificaciones y protocolos de seguridad.",
-    "vision_title": "Nuestra Visión",
-    "vision_text": "Consolidarnos como la firma consultora de referencia a nivel nacional en la validación técnica y aseguramiento de calidad operativa para el sector industrial.",
-    "values_title": "Valores Institucionales",
-    "values": {
-      "rigor": "Rigor Técnico",
-      "safety": "Seguridad Integral",
-      "integrity": "Objetividad e Integridad",
-      "excellence": "Excelencia Operativa"
-    }
+    "tag":        "Quiénes Somos",
+    "title":      "Sobre Nosotros",
+    "subtitle":   "Comprometidos con la excelencia técnica y la seguridad operativa en cada proyecto que lideramos.",
+    "card1_title": "Misión",
+    "card1_text":  "Brindar servicios de consultoría técnica especializada, garantizando el cumplimiento de estándares de calidad, seguridad y normativa vigente en cada etapa de los proyectos de nuestros clientes.",
+    "card2_title": "Visión",
+    "card2_text":  "Consolidarnos como la empresa de referencia en consultoría técnica industrial en Paraguay, reconocida por la solidez de nuestros criterios y el impacto positivo en la seguridad y productividad.",
+    "card3_title": "Valores",
+    "card3_text":  "Rigor Técnico · Integridad y Objetividad · Compromiso con la Seguridad · Excelencia Operativa. Principios que guían cada dictamen e informe que emitimos."
   },
   "services": {
-    "title": "Nuestros Servicios",
-    "item1": "Fiscalización técnica de montaje en planta industrial.",
-    "item2": "Supervisión de instalaciones y control de calidad.",
-    "item3": "Validación técnica de estructuras instaladas.",
-    "item4": "Control del cumplimiento de protocolos de seguridad."
+    "tag":      "Lo Que Hacemos",
+    "title":    "Nuestros Servicios",
+    "subtitle": "Soluciones técnicas especializadas ejecutadas con estándares internacionales de calidad y precisión.",
+    "s1_title": "Fiscalización de Montaje",
+    "s1_text":  "Control técnico riguroso de montajes en plantas industriales complejas, garantizando precisión y cumplimiento de especificaciones en cada fase.",
+    "s2_title": "Supervisión de Instalaciones",
+    "s2_text":  "Seguimiento estricto de instalaciones técnicas para asegurar la máxima calidad y eficiencia operativa bajo especificaciones precisas.",
+    "s3_title": "Protocolos de Seguridad",
+    "s3_text":  "Control integral del cumplimiento normativo en seguridad industrial para salvaguardar la integridad de personas, activos y procesos productivos.",
+    "s4_title": "Validación Estructural",
+    "s4_text":  "Validación técnica y documental de estructuras instaladas conforme a especificaciones de diseño y normativas de aplicación vigentes.",
+    "s5_title": "Informes Técnicos",
+    "s5_text":  "Elaboración de informes técnicos detallados, dictámenes periciales y documentación de respaldo para auditorías e inspecciones regulatorias.",
+    "cta_title": "¿Tiene un proyecto?",
+    "cta_text":  "Contáctenos para evaluar sus requerimientos técnicos y recibir una propuesta personalizada.",
+    "cta_btn":   "Contactar Ahora"
   },
-  "consultant": {
-    "title": "Dirección Técnica",
-    "role": "Ingeniera Industrial - Consultora",
-    "bio": "Profesional con amplia experiencia en la supervisión de instalaciones y verificación de cumplimiento técnico en plantas operativas. Lidera la gestión rigurosa de protocolos de seguridad industrial y validación de calidad estructural, asegurando los más altos estándares en cada proyecto."
+  "why": {
+    "tag":        "Nuestra Diferencia",
+    "title":      "Por Qué Elegirnos",
+    "subtitle":   "Más de una década de experiencia en la industria nos respalda.",
+    "card_title": "Independencia Técnica",
+    "card_text":  "Nuestros informes y dictámenes son completamente objetivos e imparciales. Trabajamos con independencia total de los contratistas y proveedores, garantizando la objetividad de cada evaluación.",
+    "f1_title":   "Rigor en Cada Etapa",
+    "f1_text":    "Aplicamos metodologías y estándares internacionales en cada evaluación, desde la planificación hasta la entrega final del informe.",
+    "f2_title":   "Documentación Completa",
+    "f2_text":    "Entregamos informes técnicos detallados, protocolos de inspección y evidencia fotográfica respaldando cada dictamen emitido.",
+    "f3_title":   "Alcance Nacional",
+    "f3_text":    "Capacidad operativa ágil para proyectos en todo el territorio paraguayo con tiempos de respuesta competitivos.",
+    "s1_label":   "Años de Experiencia",
+    "s1_sub":     "En consultoría industrial",
+    "s2_label":   "Conformidad Técnica",
+    "s2_sub":     "En todos nuestros proyectos",
+    "s3_label":   "Proyectos Completados",
+    "s3_sub":     "A nivel nacional"
   },
   "contact": {
-    "title": "Contacto",
-    "role": "Ingeniera Industrial - Consultora"
+    "tag":      "Trabajemos Juntos",
+    "title":    "Contacto",
+    "subtitle": "¿Tiene un proyecto que requiere supervisión técnica especializada? Estamos listos para asesorarle.",
+    "role":     "Ingeniera Industrial — Consultora",
+    "name":     "Nombre Completo",
+    "email":    "Correo Electrónico",
+    "message":  "Mensaje o Consulta",
+    "send":     "Enviar Mensaje"
   },
   "footer": {
-    "copyright": "© 2026 Environmental & Industrial Consulting. Todos los derechos reservados."
+    "desc":          "Consultoría técnica especializada en fiscalización, supervisión y seguridad industrial en Paraguay.",
+    "links_title":   "Navegación",
+    "contact_title": "Contacto Directo",
+    "copy":          "© 2026 Environmental & Industrial Consulting · eiconsulting.com.py"
   }
 }
